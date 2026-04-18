@@ -1,45 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Story — Life Decision Simulator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<div id="app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Story — Life Decision Simulator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="site-header">
+        <p class="label">Interactive Experience</p>
+        <h1>Your <em>Story</em></h1>
+      </header>
 
-  <header class="site-header">
-    <p class="label">Interactive Experience</p>
-    <h1>Your <em>Story</em></h1>
-  </header>
+      <div class="progress-wrap">
+        <div class="progress-meta">
+          <span id="prog-label">Chapter 1 of 3</span>
+          <span id="prog-pct">0%</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        <div class="chapter-dots" id="chapter-dots"></div>
+      </div>
 
-  <div class="progress-wrap">
-    <div class="progress-meta">
-      <span id="prog-label">Chapter 1 of 3</span>
-      <span id="prog-pct">0%</span>
+      <div class="card" id="main-card">
+        <div id="scene"></div>
+      </div>
+
+      <div class="history-toggle">
+        <button id="history-btn" onclick="toggleHistory()">
+          ▾ show choices made
+        </button>
+      </div>
+      <div id="history-panel">
+        <div id="history-list"></div>
+      </div>
     </div>
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" id="progress-fill"></div>
-    </div>
-    <div class="chapter-dots" id="chapter-dots"></div>
-  </div>
 
-  <div class="card" id="main-card">
-    <div id="scene">
-    </div>
-  </div>
-
-  <div class="history-toggle">
-    <button id="history-btn" onclick="toggleHistory()">▾ show choices made</button>
-  </div>
-  <div id="history-panel">
-    <div id="history-list"></div>
-  </div>
-
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
